@@ -1,33 +1,45 @@
-# Breast Cancer Diagnosis Prediction using KNN and K-Means
+# Breast Cancer Diagnosis Prediction
 
-## 📌 Objective
-To classify breast cancer diagnoses into two categories:
-- **Malignant (M)**
-- **Benign (B)**
+## Overview
+This project classifies breast cancer tumors into **Malignant (M)** and **Benign (B)** categories using **K-Nearest Neighbors (KNN)** and **K-Means clustering**. The dataset used is the [Wisconsin Breast Cancer Dataset](https://www.kaggle.com/datasets/uciml/breast-cancer-wisconsin-data).
 
-using the **K-Nearest Neighbors (KNN)** and **K-Means Clustering** algorithms.
+## Approach
 
----
+1. **Data Loading:** Read Excel file into a pandas DataFrame.  
+2. **Preprocessing:**  
+   - Encode `diagnosis`: M → 1, B → 0  
+   - Drop unnecessary columns: `id` and `Unnamed: 32`  
+   - Normalize features using Min-Max scaling  
+3. **Train-Test Split:** Split dataset into 80% training and 20% testing.  
+4. **K-Means Clustering:**  
+   - Unsupervised clustering into 2 clusters  
+   - Compare cluster assignments with actual diagnosis  
+5. **KNN Classification:**  
+   - Train KNN (k=5) on training set  
+   - Predict on testing set  
+6. **Evaluation Metrics:**  
+   - Accuracy, Precision, Recall, F1-score  
+   - Confusion Matrix and Classification Report  
+7. **Visualization:**  
+   - PCA plot to visualize clusters  
+   - Confusion matrix heatmap  
 
-## 📂 Dataset
-The dataset was provided as an Excel file.  
-Target column:
-- `diagnosis`
-  - `M` → 1
-  - `B` → 0
+## Results
 
-Unnecessary columns removed:
-- `id`
-- `Unnamed: 32`
+- **KNN Model Performance:**  
+  - Accuracy: ~96.5%  
+  - Precision: 1.0  
+  - Recall: 0.905  
+  - F1-score: 0.95  
 
----
+- **K-Means Clustering:**  
+  - Rough separation of malignant and benign tumors, useful for visualization.
 
-## ⚙️ Methodology
+## Files
 
-### 1. File Upload in Google Colab  
-The dataset is uploaded directly into Google Colab.
+- `Breast_Cancer_KNN_KMeans.ipynb` – Jupyter/Colab Notebook with full code.  
+- `dataset.xlsx` – Original dataset (upload if possible).  
 
-### 2. Handling Missing Values (Deletion Method)  
-Rows with missing values are removed using:
-```python
-df = df.dropna()
+## Conclusion
+
+The KNN model achieved excellent performance in classifying tumors, making it reliable for early breast cancer diagnosis. K-Means clustering provides an unsupervised view of the natural groupings.
