@@ -3,7 +3,7 @@
 This project classifies breast cancer tumors into **Malignant (M)** or **Benign (B)** using **K-Nearest Neighbors (KNN)** and performs clustering using **K-Means**.
 
 Dataset used: Breast Cancer Wisconsin Diagnostic Dataset
-(Provided in the assignment)
+
 
 ---
 
@@ -89,6 +89,3 @@ The goal of this project is to:
 3. Run all cells in `notebook.ipynb`
 4. View model scores and clustering results
 
-
-If you want, I can now create the **Google Colab/Jupyter Notebook (`.ipynb`)** automatically for you.
-Just say: **"make the notebook"**.
