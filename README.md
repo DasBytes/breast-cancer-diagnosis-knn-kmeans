@@ -1,76 +1,94 @@
-📌 Breast Cancer Diagnosis — KNN & K-Means
+# 📌 Breast Cancer Diagnosis — KNN & K-Means
 
-This project classifies breast cancer tumors into Malignant (M) or Benign (B) using K-Nearest Neighbors (KNN) and performs clustering using K-Means.
+This project classifies breast cancer tumors into **Malignant (M)** or **Benign (B)** using **K-Nearest Neighbors (KNN)** and performs clustering using **K-Means**.
 
 Dataset used: Breast Cancer Wisconsin Diagnostic Dataset
 (Provided in the assignment)
 
-🚀 Objectives
+---
+
+## 🚀 Objectives
 
 The goal of this project is to:
 
-Convert the diagnosis column:
-M → 1, B → 0
+* Convert the diagnosis column:
+  **M → 1**, **B → 0**
+* Drop unnecessary columns:
 
-Drop unnecessary columns:
+  * `id`
+  * `Unnamed: 32`
+* Apply **Min-Max Normalization**
+* Split the dataset into:
 
-id
+  * **Training: 80%**
+  * **Testing: 20%**
+* Apply **K-Means clustering (k=2)**
+  to observe patterns between benign and malignant tumors
+* Train a **KNN classifier with k = 5**
+* Evaluate the model using:
 
-Unnamed: 32
+  * Accuracy
+  * Precision
+  * Recall
+  * F1-score
 
-Apply Min-Max Normalization
+---
 
-Split the dataset into:
+## 🧪 Methods Used
 
-Training: 80%
+### 1. **Data Preprocessing**
 
-Testing: 20%
+* Loaded the dataset
+* Encoded diagnosis labels (`M = 1`, `B = 0`)
+* Dropped irrelevant columns
+* Scaled all features using MinMaxScaler
 
-Apply K-Means clustering (k=2)
-to observe patterns between benign and malignant tumors
+### 2. **Clustering (K-Means)**
 
-Train a KNN classifier with k = 5
+* Applied **k=2**
+* Observed how the data groups into two clusters
 
-Evaluate the model using:
+### 3. **Classification (KNN)**
 
-Accuracy
+* Used **KNeighborsClassifier(k=5)**
+* Trained on normalized training data
+* Evaluated predictions using standard classification metrics
 
-Precision
+---
 
-Recall
+## 📊 Model Results
 
-F1-score
-
-🧪 Methods Used
-1. Data Preprocessing
-
-Loaded the dataset
-
-Encoded diagnosis labels (M = 1, B = 0)
-
-Dropped irrelevant columns
-
-Scaled all features using MinMaxScaler
-
-2. Clustering (K-Means)
-
-Applied k=2
-
-Observed how the data groups into two clusters
-
-3. Classification (KNN)
-
-Used KNeighborsClassifier(k=5)
-
-Trained on normalized training data
-
-Evaluated predictions using standard classification metrics
-
-📊 Model Results
-Metric	Score
-Accuracy	~0.96
-Precision	~1.00
-Recall	~0.90
-F1-score	~0.95
+| Metric        | Score |
+| ------------- | ----- |
+| **Accuracy**  | ~0.96 |
+| **Precision** | ~1.00 |
+| **Recall**    | ~0.90 |
+| **F1-score**  | ~0.95 |
 
 (Your exact results may vary slightly depending on train-test split randomness.)
+
+---
+
+## 📁 Files in This Repository
+
+* `notebook.ipynb` — Google Colab/Jupyter Notebook containing:
+
+  * Data preprocessing
+  * K-Means clustering
+  * KNN classification
+  * Model evaluation
+* `README.md` — Project summary and explanation
+
+
+---
+
+## ▶️ How to Run
+
+1. Open **Google Colab**
+2. Upload the dataset file
+3. Run all cells in `notebook.ipynb`
+4. View model scores and clustering results
+
+
+If you want, I can now create the **Google Colab/Jupyter Notebook (`.ipynb`)** automatically for you.
+Just say: **"make the notebook"**.
