@@ -1,44 +1,76 @@
-# Breast Cancer Diagnosis Prediction
+📌 Breast Cancer Diagnosis — KNN & K-Means
 
-## Overview
-This project classifies breast cancer tumors into **Malignant (M)** and **Benign (B)** categories using **K-Nearest Neighbors (KNN)** and **K-Means clustering**. The dataset used is the [Wisconsin Breast Cancer Dataset](https://www.kaggle.com/datasets/uciml/breast-cancer-wisconsin-data).
+This project classifies breast cancer tumors into Malignant (M) or Benign (B) using K-Nearest Neighbors (KNN) and performs clustering using K-Means.
 
-## Approach
+Dataset used: Breast Cancer Wisconsin Diagnostic Dataset
+(Provided in the assignment)
 
-1. **Data Loading:** Read Excel file into a pandas DataFrame.  
-2. **Preprocessing:**  
-   - Encode `diagnosis`: M → 1, B → 0  
-   - Drop unnecessary columns: `id` and `Unnamed: 32`  
-   - Normalize features using Min-Max scaling  
-3. **Train-Test Split:** Split dataset into 80% training and 20% testing.  
-4. **K-Means Clustering:**  
-   - Unsupervised clustering into 2 clusters  
-   - Compare cluster assignments with actual diagnosis  
-5. **KNN Classification:**  
-   - Train KNN (k=5) on training set  
-   - Predict on testing set  
-6. **Evaluation Metrics:**  
-   - Accuracy, Precision, Recall, F1-score  
-   - Confusion Matrix and Classification Report  
-7. **Visualization:**  
-   - PCA plot to visualize clusters  
-   - Confusion matrix heatmap  
+🚀 Objectives
 
-## Results
+The goal of this project is to:
 
-- **KNN Model Performance:**  
-  - Accuracy: ~96.5%  
-  - Precision: 1.0  
-  - Recall: 0.905  
-  - F1-score: 0.95  
+Convert the diagnosis column:
+M → 1, B → 0
 
-- **K-Means Clustering:**  
-  - Rough separation of malignant and benign tumors, useful for visualization.
+Drop unnecessary columns:
 
-## Files
+id
 
-- `Breast_Cancer_KNN_KMeans.ipynb` – Jupyter/Colab Notebook with full code.  
+Unnamed: 32
 
-## Conclusion
+Apply Min-Max Normalization
 
-The KNN model achieved excellent performance in classifying tumors, making it reliable for early breast cancer diagnosis. K-Means clustering provides an unsupervised view of the natural groupings.
+Split the dataset into:
+
+Training: 80%
+
+Testing: 20%
+
+Apply K-Means clustering (k=2)
+to observe patterns between benign and malignant tumors
+
+Train a KNN classifier with k = 5
+
+Evaluate the model using:
+
+Accuracy
+
+Precision
+
+Recall
+
+F1-score
+
+🧪 Methods Used
+1. Data Preprocessing
+
+Loaded the dataset
+
+Encoded diagnosis labels (M = 1, B = 0)
+
+Dropped irrelevant columns
+
+Scaled all features using MinMaxScaler
+
+2. Clustering (K-Means)
+
+Applied k=2
+
+Observed how the data groups into two clusters
+
+3. Classification (KNN)
+
+Used KNeighborsClassifier(k=5)
+
+Trained on normalized training data
+
+Evaluated predictions using standard classification metrics
+
+📊 Model Results
+Metric	Score
+Accuracy	~0.96
+Precision	~1.00
+Recall	~0.90
+F1-score	~0.95
+
+(Your exact results may vary slightly depending on train-test split randomness.)
