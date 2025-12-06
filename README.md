@@ -38,7 +38,6 @@ This project classifies breast cancer tumors into **Malignant (M)** and **Benign
 ## Files
 
 - `Breast_Cancer_KNN_KMeans.ipynb` – Jupyter/Colab Notebook with full code.  
-- `dataset.xlsx` – Original dataset (upload if possible).  
 
 ## Conclusion
 
