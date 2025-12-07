@@ -87,5 +87,5 @@ The goal of this project is to:
 1. Open **Google Colab**
 2. Upload the dataset file
 3. Run all cells in `notebook.ipynb`
-4. View model scores and clustering results
+4. View model scores
 
