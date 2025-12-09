@@ -65,8 +65,6 @@ The goal of this project is to:
 | **Recall**    | ~0.90 |
 | **F1-score**  | ~0.95 |
 
-(Your exact results may vary slightly depending on train-test split randomness.)
-
 ---
 
 ## 📁 Files in This Repository
